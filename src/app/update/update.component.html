@@ -1,0 +1,18 @@
+<div class="details" *ngIf="movie"> <!--movie here is actually selected movie that was reassigned to movie due to the @input in teh movie details ts and the property-binding to the selector in the movie html-->
+
+  <div class="con">
+    <div class="imgBx">
+      <img src="{{movie.image}}" alt="">
+    </div>
+
+    <div class="dets">
+      <h3> Selected Movie: </h3><input [(ngModel)]="movie.name">
+      <textarea [(ngModel)]="movie.description"></textarea>
+      <input [(ngModel)]="movie.releaseYear">
+      <input [(ngModel)]="movie.image">
+      <button (click)="update()"> Save</button>
+      <button (click)="deletedMovie(movie.id)">Remove Movie</button>
+      <button (click)="goBack()"> Go Back</button>
+    </div>
+  </div>
+</div>

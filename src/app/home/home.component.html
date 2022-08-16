@@ -1,0 +1,23 @@
+
+<div class="movie">
+
+<h1>My Movies Collection</h1>
+
+  <div  class="movies">
+      <div *ngFor="let eachMovie of movies" class="movielist">
+
+       <a routerLink="/detail/{{eachMovie.id}}">
+        <div class="imgBx">
+          <img src="{{eachMovie.image}}" alt="">
+         </div>
+     <div class="cont">
+
+       <p class="nameYear">{{eachMovie.name}} - {{eachMovie.releaseYear}}</p>
+       <p class="description">{{eachMovie.description}}</p>
+       </div>
+    </a>
+
+  </div>
+</div>
+
+</div>
